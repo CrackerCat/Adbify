@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name" translatable="false">Adbify</string>
+
+    <!-- Admob Test -->
+    <string name="admob_app_id" translatable="false">ca-app-pub-3940256099942544~3347511713</string>
+    <string name="admob_test_open_ad_id" translatable="false">ca-app-pub-3940256099942544/3419835294</string>
+
+    <string name="action_attachment">Attachment</string>
+    <string name="action_keep_screen_on">Keep Screen On</string>
+    <string name="action_kill_proccess">Kill Session</string>
+    <string name="action_share_transcript">Share transcript</string>
+    <string name="about_title">About</string>
+    <string name="about_view_source_code"><![CDATA[View source code at %s]]></string>
+    <string name="title_confirm_kill_process">Really kill this session?</string>
+    <string name="title_share_transcript_with">Send transcript to:</string>
+    <string name="file_attach_failed">failed to attach file!</string>
+    <string name="ask_for_permission">Please give us permission to access your storage to continue.</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="terminal_service_start_error">MainActivity failed to start TerminalService</string>
+
+    <string name="notification_terminal_session">Terminal Session</string>
+    <string name="notification_terminal_session_des">Foreground service to keep the Terminal Session alive.</string>
+    <string name="notification_running">Running. Tap to open Adbify.</string>
+    <string name="notification_action_stop">Stop</string>
+</resources>

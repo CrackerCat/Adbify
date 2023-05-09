@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_attachment"
+        android:icon="@drawable/ic_file_present"
+        android:showAsAction="ifRoom"
+        android:title="@string/action_attachment" />
+
+    <item
+        android:id="@+id/action_share_transcript"
+        android:icon="@drawable/ic_share"
+        android:showAsAction="ifRoom"
+        android:title="@string/action_share_transcript" />
+
+    <item
+        android:id="@+id/action_kill"
+        android:icon="@drawable/ic_close"
+        android:showAsAction="ifRoom"
+        android:title="@string/action_kill_proccess" />
+
+    <item
+        android:id="@+id/action_keep_screen_on"
+        android:checkable="true"
+        android:showAsAction="never"
+        android:title="@string/action_keep_screen_on" />
+
+    <item
+        android:id="@+id/action_about"
+        android:showAsAction="never"
+        android:title="@string/about_title" />
+</menu>

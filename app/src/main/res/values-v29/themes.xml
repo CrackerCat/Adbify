@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.Adbify" parent="Base.Theme.Adbify">
+        <item name="android:forceDarkAllowed">false</item>
+    </style>
+</resources>

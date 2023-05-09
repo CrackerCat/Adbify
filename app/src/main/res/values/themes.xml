@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Base.Theme.Adbify" parent="Theme.Material3.Dark.Adbify">
+        <item name="appColorPrimary">@color/app_color</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+
+        <item name="android:statusBarColor">?android:colorBackground</item>
+        <item name="android:navigationBarColor">?android:colorBackground</item>
+    </style>
+
+    <style name="Theme.Adbify" parent="Base.Theme.Adbify" />
+
+    <style name="ThemeOverlay">
+        <item name="android:colorPrimary">@android:color/black</item>
+        <item name="android:colorPrimaryDark" tools:ignore="DuplicateDefinition">
+            @android:color/black
+        </item>
+        <item name="android:colorBackground">@android:color/black</item>
+        <item name="colorSurface" tools:ignore="DuplicateDefinition">@android:color/black</item>
+    </style>
+
+    <style name="ThemeOverlay.DynamicColors.Dark" parent="ThemeOverlay.Material3.DynamicColors.Dark.Rikka" />
+</resources>

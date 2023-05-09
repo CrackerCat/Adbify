@@ -1,0 +1,102 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'dev.rikka.tools.materialthemebuilder'
+}
+
+android {
+    namespace "com.adbify"
+    compileSdk rootProject.ext.compileSdk
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+        applicationId "com.rv882.adbify"
+        minSdk rootProject.ext.minSdk
+        targetSdk rootProject.ext.targetSdk
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
+        resValue 'string', 'app_version', versionName + ' (' + versionCode + ')'
+    }
+
+    buildFeatures {
+        viewBinding true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
+    }
+
+    packagingOptions {
+        jniLibs {
+            useLegacyPackaging true
+        }
+    }
+
+    splits {
+        abi {
+            enable true
+            reset()
+            include 'x86', 'x86_64', 'armeabi-v7a', 'arm64-v8a'
+            universalApk true
+        }
+    }
+}
+
+materialThemeBuilder {
+    themes {
+        adbify {
+            primaryColor = "#FF8000"
+            lightThemeFormat = "Theme.Material3.Light.%s"
+            lightThemeParent = "Theme.Material3.Light.Rikka"
+            darkThemeFormat = "Theme.Material3.Dark.%s"
+            darkThemeParent = "Theme.Material3.Dark.Rikka"
+        }
+    }
+    generatePalette = true
+    generateTextColors = true
+}
+
+configurations.all {
+    exclude group: 'androidx.appcompat', module: 'appcompat'
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(":terminalview")
+
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.0'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.0'
+
+    implementation 'androidx.core:core-ktx:1.9.0'
+    implementation 'com.google.android.material:material:1.7.0'
+    implementation 'androidx.activity:activity-ktx:1.6.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+
+    implementation 'dev.rikka.rikkax.appcompat:appcompat:1.5.0.1'
+    implementation 'dev.rikka.rikkax.core:core-ktx:1.4.1'
+    implementation 'dev.rikka.rikkax.material:material:2.5.1'
+    implementation 'dev.rikka.rikkax.html:html-ktx:1.1.2'
+    implementation 'dev.rikka.rikkax.insets:insets:1.3.0'
+
+    def lifecycle_version = "2.5.1"
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-process:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-common-java8:$lifecycle_version"
+
+    implementation 'me.zhanghai.android.appiconloader:appiconloader:1.5.0'
+
+    implementation 'com.google.android.gms:play-services-ads:22.0.0'
+}

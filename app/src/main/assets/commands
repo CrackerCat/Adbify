@@ -1,0 +1,39 @@
+adb shutdown
+adb reboot
+adb reboot bootloader
+adb reboot recovery
+adb pull [filename]
+adb push [filename]
+adb sideload [filename]
+adb start-server
+adb kill-server
+adb install [filename.apk]
+adb install -r [filename.apk]
+adb install -s [filename.apk]
+adb install -f [filename.apk]
+adb shell
+adb shell ls
+adb shell dumpstate
+adb shell pm uninstall [com.example.myapp]
+adb shell screencap -p [filename]
+adb shell screenrecord [filename]
+adb shell am start -a android.intent.action.VIEW -d
+adb shell pm list features
+adb shell dumpsys activity
+adb shell list packages
+adb shell list packages -r
+adb shell list packages -3
+adb shell list packages -s
+adb shell list packages -u
+adb shell dumpsys package packages
+adb shell list permissions -g -r
+adb logcat
+adb logcat > [logcat.txt]
+adb remount
+adb connect [device IP address]
+adb –help
+adb get-statеget-statе
+adb get-serialno
+adb backup -apk -all -f backup.ab
+adb backup -apk -shared -all -f backup.ab
+adb backup -apk -nosystem -all -f backup.ab

@@ -1,0 +1,13 @@
+<i>Note: New pairing method is supported on Android 11+ devices.</i>
+
+<b>How does it work?</b>
+Adbify bundles an ADB server within the app. Normally, this server cannot connect to the local device because it requires an active USB connection. However, Android's Wireless ADB Debugging feature allows the server and the client to connect to each other locally.
+
+<b>How to setup</b>
+1.) About &raquo; Build Number &raquo; Click 7 times
+2.) Developer Settings &raquo; Wireless ADB Debugging &raquo; On
+3.) Developer Settings &raquo; ADB Debugging &raquo; On
+
+Official guide: <a href="https://developer.android.com/studio/command-line/adb">https://developer.android.com/studio/command-line/adb</a>
+
+Need any help? Contact us at: <u>rohitkumar882333@gmail.com</u>
